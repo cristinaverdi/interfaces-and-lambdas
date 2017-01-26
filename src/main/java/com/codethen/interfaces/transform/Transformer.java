@@ -1,7 +1,8 @@
 package com.codethen.interfaces.transform;
 
 @FunctionalInterface
-public interface Transformer {
+public interface Transformer<In, Out> {
 
-    String transform(String str);
+    /** transforms the argument x and returns a value */
+    Out transform(In x);
 }
