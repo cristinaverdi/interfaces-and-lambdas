@@ -11,7 +11,7 @@ public class Main {
         UpperCase upperCase = new UpperCase();
         Twice twice = new Twice();
 
-        System.out.println(upperCase.transform("hola"));
+        System.out.println(upperCase.apply("hola"));
         System.out.println(twice.transform("hola"));
 
         Transformer<String, String> t = (str) -> str + "!!!";
@@ -39,5 +39,15 @@ public class Main {
         List<Integer> lengths = animals.stream()
             .map(s -> s.length())
             .collect(Collectors.toList());
+
+        System.out.println(lengths);
+
+
+        List<String> upperCased = animals.stream()
+            .map(upperCase)
+            .collect(Collectors.toList());
+
+        System.out.println(upperCased);
+
     }
 }

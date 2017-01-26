@@ -1,9 +1,11 @@
 package com.codethen.interfaces.transform;
 
-public class UpperCase implements Transformer<String, String> {
+import java.util.function.Function;
+
+public class UpperCase implements Function<String, String> {
 
     @Override
-    public String transform(String str) {
+    public String apply(String str) {
         return str.toUpperCase();
     }
 }
